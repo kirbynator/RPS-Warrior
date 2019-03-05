@@ -1,0 +1,49 @@
+.contain{
+  height: 89px;
+  width: 160px;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.ground{
+  height: 50%;
+  width: 100%;
+  background-color: rgb(128, 128, 128);
+  justify-content: end;
+  display: flex;
+}
+.sky{
+  background-color: aqua;
+
+}
+.icon{
+  height: 32px;
+  width: 32px;
+}
+#enemy{
+  float: right;
+}
+
+#enemyHand{
+  float: right;
+  opacity: 0.0;
+}
+.heath{
+  height: 32px;
+  width: 160px;
+}
+#result{
+  background-color: rgb(10, 53, 39);
+  border-style: double;
+  border-color: darkgray;
+  color: #ffff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  height: 64px;
+  width: 155px;
+  margin-top: 0px;
+}
