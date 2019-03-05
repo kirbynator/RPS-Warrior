@@ -1,13 +1,16 @@
 .contain{
-  height: 89px;
-  width: 160px;
+  height: 64px;
+  width: 166px;
+  margin: 50px;
+  
 }
 body{
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   height: 100%;
   width: 100%;
+  background-color: steelblue;
 }
 .ground{
   height: 50%;
@@ -18,6 +21,8 @@ body{
 }
 .sky{
   background-color: aqua;
+  border-style: double;
+  border-color: darkgray;
 
 }
 .icon{
@@ -46,4 +51,8 @@ body{
   height: 64px;
   width: 155px;
   margin-top: 0px;
+  margin-bottom: 0px;
+}
+#music{
+  opacity: 0.0;
 }

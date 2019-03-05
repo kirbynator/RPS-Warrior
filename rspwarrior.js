@@ -1,4 +1,7 @@
 var ready = true
+document.getElementById("result").onclick = function(){
+  document.getElementById("music").style.opacity= "1.0"
+}
 if (ready === true){
   
   document.getElementById("scissor").onclick = function(){
@@ -94,9 +97,11 @@ var compare = function(choice1,choice2){
 compare(userChoice,computerChoice);
 }
     async function winReset(){
+      var audio = new Audio('doDamage.mp3');
+audio.play();
       document.getElementById('enemy').src='https://piskel-imgstore-b.appspot.com/img/e4c2e43a-3ee2-11e9-99fe-ebc264e9404a.gif'
-      document.getElementById("result").innerHTML = "YOU WIN";
-      await sleep(800);
+      document.getElementById("result").innerHTML = "YOU WIN!";
+      await sleep(1000);
       document.getElementById('enemy').style.opacity= "0.0"
       document.getElementById('rock').style.opacity= "0.0"
       document.getElementById('paper').style.opacity= "0.0"
@@ -107,7 +112,7 @@ compare(userChoice,computerChoice);
       document.getElementById('enemy').style.opacity= "1.0"
       document.getElementById('enemy').src='https://piskel-imgstore-b.appspot.com/img/97c26500-3ed5-11e9-beff-39c8165397db.gif'
       document.getElementById('hero').src='https://piskel-imgstore-b.appspot.com/img/1c37f157-3ecf-11e9-8c30-39c8165397db.gif'
-      await sleep(800);
+      await sleep(750);
       document.getElementById('enemy').src='https://piskel-imgstore-b.appspot.com/img/3896d36b-3ed6-11e9-aa2f-e10143188db8.gif'
       document.getElementById('rock').style.opacity= "1.0"
       document.getElementById('paper').style.opacity= "1.0"
@@ -126,6 +131,8 @@ compare(userChoice,computerChoice);
       ready = true
     }
 async function lossReset(lossTotal){
+  var audio = new Audio('takeDamage.mp3');
+audio.play();
   if (lossTotal == 1){
     document.getElementById('health').src='https://piskel-imgstore-b.appspot.com/img/f6e73259-3ee8-11e9-bb5f-6dc0f7016973.gif'
     document.getElementById("result").innerHTML = "You lost...";
@@ -163,6 +170,8 @@ async function lossReset(lossTotal){
     document.getElementById('health').src='https://piskel-imgstore-b.appspot.com/img/0e443140-3eea-11e9-83ed-6dc0f7016973.gif'
     document.getElementById("result").innerHTML = "You Died...   Wins:" + winTotal ;
     document.getElementById('hero').style.opacity= "0.0"
+    await sleep(10000);
+    location.reload();
   }
  
 }
